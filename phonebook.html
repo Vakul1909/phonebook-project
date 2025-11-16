@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phonebook Management System</title>
+<link rel="stylesheet" href="phonebook.css">
+</head>
+<body>
+
+<div id="login-page" class="container">
+    <h2>Login Page</h2>
+    <button onclick="openAdminLogin()">Admin Login</button>
+    <button onclick="openUserPanel()">User Panel</button>
+</div>
+
+<div id="admin-login" class="container hidden">
+    <h2>Admin Login</h2>
+    <input type="password" id="admin-pass" placeholder="Enter Admin Password">
+    <button onclick="verifyAdmin()">Login</button>
+    <button onclick="goBack()">Back</button>
+</div>
+
+<div id="user-panel" class="container hidden">
+    <h2>User Panel</h2>
+    <button onclick="displayContacts('user')">Display All</button>
+    <button onclick="searchName('user')">Search by Name</button>
+    <button onclick="searchNumber('user')">Search by Number</button>
+    <button onclick="searchCity('user')">Search by City</button>
+    <button onclick="goBack()">Back</button>
+</div>
+
+<div id="admin-panel" class="container hidden">
+    <h2>Admin Panel</h2>
+    <button onclick="addContact()">Add Contact</button>
+    <button onclick="updateContact()">Update Contact</button>
+    <button onclick="displayContacts('admin')">Display All</button>
+    <button onclick="searchName('admin')">Search by Name</button>
+    <button onclick="searchNumber('admin')">Search by Number</button>
+    <button onclick="searchCity('admin')">Search by City</button>
+    <button onclick="deleteContact()">Delete Contact</button>
+    <button onclick="deleteAll()">Delete All</button>
+    <button onclick="goBack()">Back</button>
+</div>
+
+<div id="output" class="container hidden"></div>
+
+<script src="phonebook.js"></script>
+</body>
+</html>
